@@ -1,0 +1,9 @@
+name: DirectAuction
+author: SemTeul
+main: semteul\directauction\DirectAuction
+api: [3.0.0-ALPHA11, 3.0.0-ALPHA12]
+version: "0.3"
+permissions:
+  directauction:
+    description: "DirectAuction command"
+    default: true
