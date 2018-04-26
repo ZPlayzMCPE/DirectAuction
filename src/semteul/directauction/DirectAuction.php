@@ -3,10 +3,8 @@
 namespace semteul\directauction;
 
 use semteul\directauction\task\DirectAuctionTask;
-
 use chalk\utils\Messages;
 use onebone\economyapi\EconomyAPI;
-
 use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -20,8 +18,6 @@ use pocketmine\permission\Permission;
 use pocketmine\item\Item;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
-
-
 
 class DirectAuction extends PluginBase implements Listener {
 	private $TAG = "[DirectAuction] ";
@@ -355,7 +351,7 @@ class DirectAuction extends PluginBase implements Listener {
 		}
 		
 		$itemNameTag = $this->stringifyItemName($item);
-		$itemEnchantmentsTag = $this->stringifyItemEnchantments($item);*/
+		$itemEnchantmentsTag = $this->stringifyItemEnchantments($item);
 		
 		$maxCount = $inventory->getCount($item->getId(), $item->getDamage());
 		if($maxCount < $count) {
@@ -530,7 +526,7 @@ class DirectAuction extends PluginBase implements Listener {
 			$player->sendMessage(TextFormat::DARK_AQUA . $this->TAG . $this->msg->getMessage("auction-info-enchant", [
 				"info" => TextFormat::AQUA . $this->stringifyItemEnchantments($this->task["item"]) . TextFormat::DARK_AQUA
 			]));
-		}*/
+		}
 		
 		$player->sendMessage(TextFormat::DARK_AQUA . $this->TAG . $this->msg->getMessage("auction-info-price", [
 			"info" => TextFormat::GOLD . $this->stringifyPrice($this->task["price"]) . TextFormat::DARK_AQUA
