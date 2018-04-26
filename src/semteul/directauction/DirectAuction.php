@@ -110,7 +110,7 @@ class DirectAuction extends PluginBase implements Listener {
 	
 	public function onCommand(CommandSender $player, Command $command, string $label, array $args): bool {
 		if(!$this->enable) {
-			return;
+			return true;
 		}
 		if(!(isset($args[0]))) {
 			$text = [];
