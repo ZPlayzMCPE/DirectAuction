@@ -618,13 +618,14 @@ class DirectAuction extends PluginBase implements Listener {
 	
 	public function stringifyItemEnchantments($item) {
 		if($item->hasEnchantments()) {
-			$enchantmentInstance = $item->getEnchantment();
+			$enchantmentInstance = $enchantment->getEnchantmentInstance()->getLevel();
+			$enchantment = $enchantment->getEnchantment()->getName();
 			$effectStr = "";
 			foreach($enchantmentInstance as $enchantment) {
 				if($effectStr !== "") {
 					$effectStr .= ", ";
 				}
-				$effectStr .= $item->getEnchantment()->getName() . " " . $item->getEnchantment()->getLevel();
+				$effectStr .= $enchantment->getEnchantment()->getName() . " " . $enchantment->getEnchantmentInstance()->getLevel();
 			}
 			return $effectStr;
 		}else {
