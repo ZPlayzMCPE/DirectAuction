@@ -606,7 +606,7 @@ class DirectAuction extends PluginBase implements Listener {
 	}
 	
 	
-	
+	*/*Coming Soon
 	public function stringifyItemName($item) {
 		if($item->hasCustomName()) {
 			return $item->getCustomName();
