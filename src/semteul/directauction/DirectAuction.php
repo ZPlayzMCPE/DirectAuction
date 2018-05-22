@@ -18,6 +18,7 @@ use pocketmine\permission\Permission;
 use pocketmine\item\Item;
 use pocketmine\level\Level;
 use pocketmine\math\Vector3;
+use pocketmine\item\enchantment\{Enchantment, EnchantmentInstance};
 
 class DirectAuction extends PluginBase implements Listener {
 	private $TAG = "[DirectAuction] ";
